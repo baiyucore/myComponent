@@ -1,5 +1,5 @@
 <template>
-  <div v-if="value === tabValue">
+  <div v-if="value === tabValue" class="content">
     <slot></slot>
   </div>
  
@@ -14,3 +14,8 @@ const {value} = defineProps<TabContent>()
 const {tabValue} = useTabContxt()
 
 </script>
+<style scoped>
+.content{
+  cursor: default;
+}
+</style>

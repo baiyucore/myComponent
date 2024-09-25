@@ -26,7 +26,7 @@ import { useTooltipBoolean } from './context';
 <style scoped>
 .tooltip {
   position: absolute;
-  top: -48px;
+  top: -45px;
   z-index: 50;
   border-radius: 0.375rem; 
   border-width: 1px; 

@@ -28,5 +28,7 @@ provide<TooltipBoolean>(TooltipInjectionKey,{
 .content {
   position: relative; 
   display: inline-block; 
+  cursor: default;
+  user-select: none;
 }
 </style>

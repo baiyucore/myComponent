@@ -1,0 +1,35 @@
+/* #app {
+  max-width: 1280px;
+  margin: 0 auto;
+  background-color: var(--background-color);
+  color: var(--text-color);
+
+} */
+/* :root{
+  --background-color: #333333;
+  --text-color: #ffffff;
+} */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+@media (prefers-color-scheme : light){
+  :root{
+    --background-color: #ffffff;
+    --text-color: #000000;
+  }
+}
+
+
+[data-theme='light']{
+  --background-color: #ffffff;
+  --text-color: #000000;
+}
+
+[data-theme='dark'] {
+  --background-color: #333333;
+  --text-color: #ffffff;
+}

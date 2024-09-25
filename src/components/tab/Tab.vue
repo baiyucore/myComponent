@@ -1,5 +1,8 @@
 <template>
-  <slot></slot>
+ 
+    <slot></slot>
+
+
 </template>
 
 <script setup lang="ts">
@@ -18,5 +21,6 @@ import { TabInjectionKey } from './context';
     tabValue.value = value
   }
  })
+
 
 </script>

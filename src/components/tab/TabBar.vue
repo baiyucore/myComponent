@@ -11,5 +11,6 @@
 .tabbar{
   display: flex;
   gap: 3px;
+  cursor: pointer;
 }
 </style>

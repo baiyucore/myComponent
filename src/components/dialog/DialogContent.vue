@@ -30,6 +30,7 @@ const enableScroll = () => {
 
 <style scoped>
 .button{
+  position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -38,8 +39,8 @@ const enableScroll = () => {
   height: 10px;
   width: 10px;
   border-radius: 2px;
-  background-color: #122847;
-  position: absolute;
+  /* background-color: #122847; */
+  color: black;
   top: 10px;
   right: 10px;
 }

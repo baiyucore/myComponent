@@ -1,5 +1,5 @@
 <template>
-  <div  class="Button" @click="handleClick"  role="button" tabindex="0" @keydown.enter="handleClick">
+  <div  class="Button"  :class="[variant]" >
     <slot >button</slot>
   </div>
   
@@ -7,13 +7,19 @@
 
 
 <script setup lang="ts">
-import { defineEmits } from 'vue';
 
-const emit = defineEmits(['click']);
+export interface Button{
+  type ? : Buttontype,
+  variant ?: Variant
+}
 
-const handleClick = (event: any) => {
-  emit('click', event);  // Emit a 'click' event
-};
+
+type Variant = 'primary' 
+
+type Buttontype = 'submit' | 'button'
+
+const props = defineProps<Button>()
+const variant = props.variant 
 
 </script>
 
@@ -23,16 +29,21 @@ const handleClick = (event: any) => {
   width: 95px;
   border-width: 5px;
   cursor: pointer;
-  color: rgb(255 255 255);
-  border-radius: 10px;
-  background-color: rgb(0, 0, 0);
+  border-radius: 10px; 
   font-size:15px;
   display: flex;
   justify-content: center;
   align-items: center;
   user-select: none;
+  background-color: rgba(245, 222, 179, 0.616);
+  color: var(--text-color);
 }
+.primary{
+  color: #000000;
+  background-color: rgb(235, 94, 13);
+}
+
 .Button:hover{
-  background-color: rgb(71, 71, 71);
+  background-color: rgba(190, 190, 190, 0.575);
 }
 </style>
